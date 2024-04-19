@@ -1,7 +1,9 @@
 #!/bin/bash
 
-wich java
+echo "Verificando se o java está instalado"
+echo "---------------------------------------"
 java -version #verifica versao atual do java
+echo "---------------------------------------"
 if [ $? = 0 ]; #se retorno for igual a 0
 	then #entao,
 		echo "java instalado" #print no terminal
@@ -20,7 +22,10 @@ if [ $? = 0 ]; #se retorno for igual a 0
 	fi #fecha o 2º if
 fi #fecha o 1º if
 
+echo "-----------------------------------------"
+echo "Verificando se o NodeJS está instalado"
 node -v #verifica versao atual do java
+echo "-----------------------------------------"
 if [ $? = 0 ]; #se retorno for igual a 0
         then #entao,
                 echo "node instalado" #print no terminal
