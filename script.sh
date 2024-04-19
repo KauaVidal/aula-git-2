@@ -1,14 +1,14 @@
 #!/bin/bash
 
 echo "Verificando se o java está instalado"
-echo "---------------------------------------"
+echo "---------------------------------------------------------------"
 java -version #verifica versao atual do java
-echo "---------------------------------------"
+echo "---------------------------------------------------------------"
 if [ $? = 0 ]; #se retorno for igual a 0
 	then #entao,
 		echo "java instalado" #print no terminal
 		echo "Prosseguindo para a proxima etapa..."
-		echo "-----------------------------------------"
+		echo "---------------------------------------------------------------"
 
 	else #se nao,
 		echo "java não instalado" #print no terminal
@@ -22,15 +22,15 @@ if [ $? = 0 ]; #se retorno for igual a 0
 	fi #fecha o 2º if
 fi #fecha o 1º if
 
-echo "-----------------------------------------"
+echo "---------------------------------------------------------------"
 echo "Verificando se o NodeJS está instalado"
 node -v #verifica versao atual do java
-echo "-----------------------------------------"
+echo "---------------------------------------------------------------"
 if [ $? = 0 ]; #se retorno for igual a 0
         then #entao,
-                echo "node instalado" #print no terminal
+                echo "Node instalado" #print no terminal
 		echo "Prosseguindo para proxima etapa ..."
-		echo "------------------------------------------"
+		echo "---------------------------------------------------------------"
 
         else #se nao,
                 echo "NodeJS não instalado" #print no terminal
@@ -45,3 +45,22 @@ if [ $? = 0 ]; #se retorno for igual a 0
         fi #fecha o 2º if
 fi #fecha o 1º if
 
+echo "Verificando se o banco de dados MySQL está instalado"
+mysql --v #Verifica a versão do mysql
+echo "---------------------------------------------------------------"
+if [ $? = 0 ]; #se retorno for igual a 0
+	then #entao,
+		echo "MySQL Instalado" #print no terminal
+		echo "--------------------------------FINALIZANDO------------------------------"
+	else #se nao,
+		echo "MySQL não instalado" #print no terminal
+		echo "gostaria de instalar o MySQL? [s/n]" #print no terminal
+
+		read get #variável que guarda resposta do usuário
+
+	if [ \"$get\" == \"s\" ]; #se retorno for igual a s
+
+		then #entao
+		sudo apt install mysql-server #executa instalacao do java
+	fi #fecha o 2º if
+fi #fecha o 1º if
