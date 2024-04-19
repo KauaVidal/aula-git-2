@@ -46,7 +46,7 @@ if [ $? = 0 ]; #se retorno for igual a 0
 fi #fecha o 1º if
 
 echo "Verificando se o banco de dados MySQL está instalado"
-mysql --v #Verifica a versão do mysql
+mysql -version #Verifica a versão do mysql
 echo "---------------------------------------------------------------"
 if [ $? = 0 ]; #se retorno for igual a 0
 	then #entao,
