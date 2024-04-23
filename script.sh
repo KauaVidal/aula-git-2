@@ -1,13 +1,17 @@
 #!/bin/bash
 
+echo "---------------------------------------------------------------"
+echo "Atualizando o sistema operacional"
+sudo apt update && sudo apt upgrade
+echo "---------------------------------------------------------------"
+
 echo "Verificando se o java está instalado"
-java -version #verifica versao atual do java
+java --version #verifica versao atual do java
 if [ $? = 0 ]; #se retorno for igual a 0
 	then #entao,
 		echo "java instalado" #print no terminal
 		echo "Prosseguindo para a proxima etapa..."
 		echo "---------------------------------------------------------------"
-
 	else #se nao,
 		echo "java não instalado" #print no terminal
 		echo "gostaria de instalar o java? [s/n]" #print no terminal
@@ -42,7 +46,7 @@ if [ $? = 0 ]; #se retorno for igual a 0
 fi #fecha o 1º if
 
 echo "Verificando se o banco de dados MySQL está instalado"
-mysql -version #Verifica a versão do mysql
+mysql --version #Verifica a versão do mysql
 if [ $? = 0 ]; #se retorno for igual a 0
 	then #entao,
 		echo "MySQL Instalado" #print no terminal
