@@ -1,9 +1,7 @@
 #!/bin/bash
 
 echo "Verificando se o java está instalado"
-echo "---------------------------------------------------------------"
 java -version #verifica versao atual do java
-echo "---------------------------------------------------------------"
 if [ $? = 0 ]; #se retorno for igual a 0
 	then #entao,
 		echo "java instalado" #print no terminal
@@ -22,10 +20,8 @@ if [ $? = 0 ]; #se retorno for igual a 0
 	fi #fecha o 2º if
 fi #fecha o 1º if
 
-echo "---------------------------------------------------------------"
 echo "Verificando se o NodeJS está instalado"
 node -v #verifica versao atual do java
-echo "---------------------------------------------------------------"
 if [ $? = 0 ]; #se retorno for igual a 0
         then #entao,
                 echo "Node instalado" #print no terminal
@@ -47,11 +43,10 @@ fi #fecha o 1º if
 
 echo "Verificando se o banco de dados MySQL está instalado"
 mysql -version #Verifica a versão do mysql
-echo "---------------------------------------------------------------"
 if [ $? = 0 ]; #se retorno for igual a 0
 	then #entao,
 		echo "MySQL Instalado" #print no terminal
-		echo "--------------------------------FINALIZANDO------------------------------"
+		echo "---------------------------FINALIZANDO-------------------------"
 	else #se nao,
 		echo "MySQL não instalado" #print no terminal
 		echo "gostaria de instalar o MySQL? [s/n]" #print no terminal
