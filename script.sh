@@ -40,8 +40,7 @@ if [ $? = 0 ]; #se retorno for igual a 0
 
         if [ \"$get\" == \"s\" ]; #se retorno for igual a s
                 then #entao
-		curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
-                sudo apt-get install -y nodejs #executa instalacao do nodejs
+		sudo apt install nodejs #executa instalacao do nodejs
         fi #fecha o 2º if
 fi #fecha o 1º if
 
